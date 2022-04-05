@@ -10,8 +10,11 @@ docker / dockerfile := {
     entryPoint(s"$targetDir/bin/${executableScriptName.value}")
     copy(appDir, targetDir)
     workDir("data")
-    //cmdRaw("ls")
   }
 }
 
 docker / buildOptions := BuildOptions(cache = false)
+docker / dockerUsername := Some("miguelemosreverte")
+//docker / dockerRepository := Some(
+//  "https://hub.docker.com/repository/docker/miguelemos"
+//)
