@@ -6,7 +6,8 @@ import fr.loicknuchel.typedapi.models.OpenApi
 
 import scala.io.Source.fromFile
 import Implicits._
-import format.ValidationOutputFormat
+import format.Format
+import format.Implicits._
 import model._
 
 object Main extends App {
@@ -23,7 +24,7 @@ object Main extends App {
   val validated = validate
 
   println(
-    ValidationOutputFormat.format(validated)
+    Format.printer(validated)
   )
 
   validated match {
