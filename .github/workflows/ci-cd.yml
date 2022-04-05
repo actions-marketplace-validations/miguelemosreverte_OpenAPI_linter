@@ -32,4 +32,5 @@ jobs:
         command: sbt test dockerBuildAndPush 
         docker-login-username: ${{ secrets.DOCKERHUB_USER }}
         docker-login-password: ${{ secrets.DOCKERHUB_PASSWORD }}
+        docker-registry: docker.io
 
