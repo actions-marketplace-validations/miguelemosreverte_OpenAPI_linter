@@ -15,5 +15,6 @@ outputs:
 runs:
   using: 'docker'
   image: 'Dockerfile'
+  options: -v ${{ github.workspace }}:/data
   args:
     - ${{ inputs.file }}
