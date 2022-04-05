@@ -14,7 +14,7 @@ docker / dockerfile := {
 }
 
 docker / buildOptions := BuildOptions(cache = false)
-docker / dockerUsername := Some("miguelemosreverte")
+docker / dockerUsername := Some("miguelemos")
 //docker / dockerRepository := Some(
 //  "https://hub.docker.com/repository/docker/miguelemos"
 //)
