@@ -27,7 +27,7 @@ jobs:
     - name: Publish to DockerHub
       run: sbt docker
     - name: Scala SBT Action
-      uses: miguelemosreverte/github-docker-sbt@idea
+      uses: miguelemosreverte/github-docker-sbt@idea2
       with:
         command: sbt test dockerBuildAndPush 
         docker-login-username: ${{ secrets.DOCKERHUB_USER }}
