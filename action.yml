@@ -1,0 +1,19 @@
+# action.yml
+name: 'Scala OpenAPI linter'
+branding:
+  icon: "airplay"
+  color: "gray-dark"
+description: 'Greet someone and record the time'
+inputs:
+  file:
+    description: 'openapi file'
+    required: true
+    default: 'openapi.json'
+outputs:
+  isValid:
+    description: 'if the document passes the validation steps'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.file }}
